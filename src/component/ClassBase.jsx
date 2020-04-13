@@ -5,7 +5,7 @@ class ClassBase extends Component {
   constructor(){
     super()
     this.state = {
-      todoList: [{text:"well", isComplete:true}],
+      todoList: [],
       todoInput: "",
       isComplete: false
     };

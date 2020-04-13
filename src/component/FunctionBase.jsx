@@ -3,7 +3,7 @@ import Todoo from "./Todoo";
 import {Button, Form} from "react-bootstrap";
 
 const App = () => {
-  const [todos, setTodos] = useState([{}]);
+  const [todos, setTodos] = useState([]);
 
   // { text: "Learn react", isComplete: true },
   //   { text: "Learn at impactbyte", isComplete: false },
