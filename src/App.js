@@ -6,23 +6,23 @@ import Navigasi from './component/Navigasi';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './component/Footer';
 import './App.scss';
-import Leyout from './component/Leyout';
 import ClassBase from './component/ClassBase'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <div> 
-        <div>
-             <Navigasi />
-             {/* <Switch> */}
-               {/* <Route path="/"/> */}
-              <FunctionBase />
-              {/* <ClassBase /> */}
-            {/* </Switch> */}
+      <div>
+        <Router>
+          <Navigasi />
+            <Switch>
+            <Route path="/" exact component={FunctionBase} />
+            <Route path="/classbase" exact component={ClassBase} />
+            </Switch>
             <Footer />
-        </div>
-         
+          </Router>
+      </div>
     </div>
   );
 }

@@ -31,7 +31,7 @@ class ClassBase extends Component {
         }  
     }    
     newTodos.splice(index, 1);
-    this.setState(newTodos);
+    this.setState({todoList: newTodos});
     };
 
   // handle edit todo
@@ -49,7 +49,7 @@ class ClassBase extends Component {
         const editedTodo = prompt(editTodos);
     // console.log("editedTodo", editedTodo);
         newTodos.splice(index, 1, { text: editedTodo });
-        this.setState(newTodos[index]);
+        this.setState({todoList: newTodos});
 
         console.log( "Harusnya udah berubah todosnya",newTodos)
     };
@@ -62,7 +62,7 @@ class ClassBase extends Component {
         if (!this.state.todoInput) return alert("todo belum diisi");
         const newTodos = [...this.state.todoList, { text: this.state.todoInput }];
         console.log("newTodos", newTodos);
-        this.setState(newTodos);
+        this.setState({todoList:newTodos});
         this.setState({todoInput: ""});
     };
 
